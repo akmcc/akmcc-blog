@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>All Things Evaluated by A K McCrate</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-<%= yield %>
+  <div class="nav">
+    <ul>
+    <li><a href="/">All Things Evaluated</a>
+    <li><a href="/about">About A K McCrate</a>
+      <li><a href="/contact">Get In Touch</a>
+      <% if admin_signed_in? %> 
+        <li><%= link_to '★ New Post', new_post_path %></br>
+        <li><%= link_to '★ Sign Out', destroy_admin_session_path %>
+     <% end %>
+    </ul>
+  </div>
+ 
 
+  <div id="container">
+    <span class="admin meta_links">
+     
+    </span>
+    <span id="header_img">
+    <header id="titles">
+      <h1>All Things Evaluated</h1>
+      <h2>by A K McCrate</h2>
+    </header>
+  </span>
+    <section id="posts">
+      <%= yield %>
+    </section>
+
+  </div>
 </body>
 </html>
