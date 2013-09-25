@@ -13,6 +13,8 @@ group :production do
     gem "pg"
 end
 
+ruby "2.0.0"
+
 gem "will_paginate", "~> 3.0"
 
 gem "devise"
