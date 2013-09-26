@@ -1,18 +1,22 @@
 
     <% @posts.each do |post| %>
-    <div class= "post">
-        <h3><%= post.title%></h3>
-        <p><%= simple_format(post.body) %></p>
-        <div class="meta">
-          <%= link_to post.created_at.strftime("%B %d, %Y"), post%>
-          <span class="admin">
-            <% if admin_signed_in? %> 
-            | <%= link_to 'Edit', edit_post_path(post) %> | 
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Now wait a minute. Are you sure this is what you\'re trying to do?' } %>
-            <% end %>
-          </span>
-        </div>
-      </div>
+    <article>
+
+        <h1><%= post.title%></h1>
+        <div class="date"><%= link_to post.created_at.strftime("%B %d, %Y"), post%></div>
+
+        <%= simple_format(post.body) %>
+
+        <% if admin_signed_in? %>
+        <span class="admin">
+
+          <%= link_to 'Edit', edit_post_path(post) %> |
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Now wait a minute. Are you sure this is what you\'re trying to do?' } %>
+        </span>
+        <% end %>
+
+
+      </article>
     <% end %>
-   
+
       <%= will_paginate @posts %>
