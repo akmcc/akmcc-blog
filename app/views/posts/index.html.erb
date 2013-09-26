@@ -2,8 +2,8 @@
     <% @posts.each do |post| %>
     <article>
 
-        <h1><%= post.title%></h1>
-        <div class="date"><%= link_to post.created_at.strftime("%B %d, %Y"), post%></div>
+        <h1><%= link_to post.title, post%></h1>
+        <div class="date"><%= post.created_at.strftime("%B %d, %Y")%></div>
 
         <%= simple_format(post.body) %>
 
