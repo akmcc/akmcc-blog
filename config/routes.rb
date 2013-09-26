@@ -1,5 +1,5 @@
 Blog::Application.routes.draw do
-  devise_for :admins
+  devise_for :admins, :skip => [:registrations]
   resources :posts
 
   root :to => "posts#index"
