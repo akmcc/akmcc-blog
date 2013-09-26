@@ -19,8 +19,6 @@ gem "will_paginate", "~> 3.0"
 
 gem "devise"
 
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
