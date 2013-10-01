@@ -8,8 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
  */
 
 * {
@@ -21,7 +19,7 @@
 }
 
 body {
-  color: #6E6E6E;
+  color: #373753;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 6em;
   padding: 0 2em;
@@ -41,7 +39,7 @@ a {
 
 header {
   padding: 1em 2em;
-  background: url("http://i.imgur.com/eXpYbqY.jpg");
+  background: url(/assets/header.jpg);
   background-size: cover;
   margin: 0 -2em;
   color: #eee;
@@ -77,6 +75,11 @@ article h1 {
     font-size: 1.5em;
 }
 
+article p {
+  margin: 0 0 1em;
+  text-indent: 2em;
+}
+
 article a {
   color: #333;
 }
@@ -95,23 +98,18 @@ article.about a {
   color: #3CB371;
 }
 
-article p {
-  margin: 1em;
-}
-
 .back-button {
   margin-top: 1em;
  } 
 
 .back-button a {
-color: #3CB371;
+  color: #3CB371;
 }
-
 
 .admin {
-  position: absolute;
   display: none;
 }
+
 article:hover .admin {
   display: inline;
 }
@@ -131,7 +129,7 @@ article:hover .admin {
   color: #6E6E6E;
   font-size: 14px;
   display: inline-block;
-  padding: 1em;
+  padding: 1em 1em 1em 0;
 }
 
 .pagination {
