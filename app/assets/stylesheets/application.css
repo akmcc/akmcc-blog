@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: #3CB371;
+  /*color: #3CB371;*/
   text-decoration: none;
 }
 
@@ -82,9 +82,36 @@ article p {
   text-indent: 1em;
 }
 
+article a {
+  color: #333;
+}
+
 article .date {
 margin-bottom: 1em;
+color: #3CB371;
 }
+
+
+article.about h1{
+  margin-bottom: 1em;
+}
+
+article.about a {
+  color: #3CB371;
+}
+
+article p {
+  margin: 1em;
+}
+
+.back-button {
+  margin-top: 1em;
+ } 
+
+.back-button a {
+color: #3CB371;
+}
+
 
 .admin {
   position: absolute;
