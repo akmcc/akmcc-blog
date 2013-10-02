@@ -33,7 +33,7 @@ body {
 }
 
 a {
-  /*color: #3CB371;*/
+  color: #3CB371;
   text-decoration: none;
 }
 
@@ -76,8 +76,7 @@ article h1 {
 }
 
 article p {
-  margin: 0 0 1em;
-  text-indent: 2em;
+  margin: 0 0 1.25em;
 }
 
 article a {
@@ -111,7 +110,7 @@ article.about a {
 }
 
 article:hover .admin {
-  display: inline;
+  display: block;
 }
 
 .admin-options {
@@ -134,17 +133,18 @@ article:hover .admin {
 
 .pagination {
   display: block;
-  width: 200px;
+  width: 100%;
   margin: 36px auto;
+  text-align: center
 }
+
+.pagination a {color: #666;}
 
 .pagination .current {
   text-decoration: underline;
 }
 
-.pagination > a {
-  color: #6E6E6E;
-}
+.previous_page, .next_page {padding: 0 1em;}
 
 /*Admin Styles*/
 
