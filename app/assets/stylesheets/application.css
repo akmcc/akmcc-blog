@@ -79,8 +79,12 @@ article p {
   margin: 0 0 1.25em;
 }
 
-article a {
+article h1 a {
   color: #333;
+}
+
+article a {
+  color: #3CB371;
 }
 
 article .date {
