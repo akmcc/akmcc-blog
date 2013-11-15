@@ -1,4 +1,4 @@
 == README
 
-Rails app for my blog
+a basic scaffolded Rails blog
 
